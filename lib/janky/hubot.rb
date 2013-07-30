@@ -80,6 +80,25 @@ module Janky
       repos.join("\n")
     end
 
+    get '/builds/all' do
+      limit = (params["limit"] || 100).to_i
+      builds = Build.queued.first(limit).map do |build|
+        { :sha1     => build.sha1,
+          :repo     => build.repo_name,
+          :branch   => build.branch_name,
+          :user     => build.user,
+          :green    => build.green?,
+          :building => build.building?,
+          :queued   => build.queued?,
+          :pending  => build.pending?,
+          :number   => build.number,
+          :status   => (build.green? ? "was successful" : "failed"),
+          :compare  => build.compare,
+          :duration => build.duration }
+      end
+      builds.to_json
+    end
+
     # Get the status of a repository's branch.
     get %r{\/([-_\.0-9a-zA-Z]+)\/([-_\+\.a-zA-z0-9\/]+)} do |repo_name, branch_name|
       limit = params["limit"]
