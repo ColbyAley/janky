@@ -134,13 +134,13 @@ ul.builds .status{
   background:url(https://doomguy.herokuapp.com/damage/0.gif);
 }
 ul.builds .building .status{
-  background:url(https://doomguy.herokuapp.com/damage/15);
+  background:url(https://doomguy.herokuapp.com/damage/15.gif);
 }
 ul.builds .janky .status{
-  background:url(https://doomguy.herokuapp.com/damage/100);
+  background:url(https://doomguy.herokuapp.com/damage/100.gif);
 }
 ul.builds .pending .status{
-  background:url(https://doomguy.herokuapp.com/damage/15);
+  background:url(https://doomguy.herokuapp.com/damage/15.gif);
 }
 
 ul.builds h2{
