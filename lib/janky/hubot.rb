@@ -87,7 +87,7 @@ module Janky
           :repo          => build.repo_name,
           :branch        => build.branch_name,
           :user          => build.user,
-          :commit_author => build.commit_author.split("<").first
+          :commit_author => build.formatted_commit_author,
           :green         => build.green?,
           :building      => build.building?,
           :queued        => build.queued?,

@@ -283,6 +283,11 @@ module Janky
       commit.author
     end
 
+    # Returns the full name of the commit author, without their email address.
+    def formatted_commit_author
+      commit.author.split(' ')[0..1].join(' ')
+    end
+
     def number
       id.to_s
     end
