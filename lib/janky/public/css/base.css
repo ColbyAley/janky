@@ -50,16 +50,9 @@ body{
   width:1000px;
 }
 
-h2#logo{
-  width:600px;
-  margin:0 auto 25px auto;
-}
-h2#logo a{
-  display:block;
-  height:156px;
-  text-indent:-9999px;
-  text-decoration:none;
-  background:url(../images/logo.png);
+#logo img {
+  width: 600px;
+  margin-top: -10px;
 }
 
 .content{
@@ -134,20 +127,20 @@ ul.builds .building a.console{
 
 ul.builds .status{
   float:left;
-  margin-top:5px;
-  margin-right:10px;
-  width:37px;
-  height:34px;
-  background:url(../images/robawt-status.gif) 0 0 no-repeat;
+  margin-top:-8px;
+  margin-right:20px;
+  width:49px;
+  height:60px;
+  background:url(https://doomguy.herokuapp.com/damage/0.gif);
 }
 ul.builds .building .status{
-  background:url(../images/building-bot.gif);
+  background:url(https://doomguy.herokuapp.com/damage/30.gif);
 }
 ul.builds .janky .status{
-  background-position:0 -200px;
+  background:url(https://doomguy.herokuapp.com/damage/100.gif);
 }
 ul.builds .pending .status{
-  background-position:0 -100px;
+  background:url(https://doomguy.herokuapp.com/damage/15.gif);
 }
 
 ul.builds h2{
